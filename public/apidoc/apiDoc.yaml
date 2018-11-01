@@ -1,0 +1,48 @@
+swagger: '2.0'
+info:
+  title: 孩子通API文档
+  version: 1.0.0
+  description:  |
+
+basePath: /1
+paths:
+  "/test/api":
+        get:
+          summary: 测试api
+          tags:
+            - 1 工具
+          produces:
+            - application/json
+            - application/xml
+          parameters:
+
+          responses:
+            "200":
+              description : ok
+              schema:
+                type: object
+                properties:
+                  auth:
+                    type: string
+  "/tool/build/auth":
+        get:
+          summary: 账号auth
+          tags:
+            - 1 工具
+          produces:
+            - application/json
+            - application/xml
+          parameters:
+            - in: query
+              name: accountNo
+              description: 账号
+              type: string
+              required: true
+          responses:
+            "200":
+              description : ok
+              schema:
+                type: object
+                properties:
+                  auth:
+                    type: string
